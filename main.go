@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	p := printer.New("localhost:4242")
-	res, err := p.Print("Friday")
-	fmt.Println("res:", res, " err:", err)
+	pr := printer.New("localhost:4242")
+	printer.Cur = pr
+	res, _ := printer.Cur.Print("Friday")
+	fmt.Println("body:", res.Body, " status:", res.Status)
 }

@@ -15,3 +15,7 @@ func (m *MockPrinter) SetPrintFunc(f PrintFunc) {
 func (m *MockPrinter) Print(s string) (*printer.Resp, error) {
 	return m.MockPrintFunc(s)
 }
+
+func NewMockPrinter() *MockPrinter {
+	return &MockPrinter{}
+}

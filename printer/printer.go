@@ -34,3 +34,5 @@ func (p *HomePrinter) Print(s string) (*Resp, error) {
 func New(URL string) *HomePrinter {
 	return &HomePrinter{URL}
 }
+
+var Cur Printer
